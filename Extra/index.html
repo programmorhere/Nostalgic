@@ -23,7 +23,13 @@
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
 
-  
+
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
 
     <title>Nostalgic Games | Home</title>
 
@@ -1259,6 +1265,14 @@
                 </div>
               </form>
             </div>
+            <div class="card card-item mt-80px">
+              <br>
+              <div class="card-body">
+                <div id="map" class="h-400px"></div>
+                <!-- <h2 class="section-title fs-30 text-center">Find us on map</h2><br>
+            <div id="map"></div> -->
+              </div>
+            </div>
           </div>
         </section>
 
@@ -1357,9 +1371,34 @@
     <!-- !Scripts -->
   </body>
 
-  <!-- Mirrored from frenify.com/work/envato/frenify/html/meta-portal/1/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 May 2023 17:22:58 GMT -->
 </html>
 
+<script src="js/main.js"></script>
+
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: 31.6013093, lng: 73.0355492 }, // Coordinates for Faisalabad
+          zoom: 13, // Adjust the zoom level as needed
+        });
+
+        var marker = new google.maps.Marker({
+          position: { lat: 31.6013093, lng: 73.0355492 },
+          map: map,
+          title: "StackHub HQ",
+        });
+      }
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9irjntPHdEJf024h7H_XKpS11OeW1Nh8&callback=initMap"
+      async
+      defer
+    ></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9irjntPHdEJf024h7H_XKpS11OeW1Nh8&callback=initMap"
+      async
+      defer
+    ></script>
 
 
 
